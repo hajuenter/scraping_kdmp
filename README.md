@@ -8,15 +8,15 @@ Proyek ini bertujuan untuk mengumpulkan dan menganalisis data komentar dari berb
 
 ## Teknologi yang Digunakan
 
-* **Python (Jupyter Notebook / `.ipynb`)**
-* **Apify** → scraping data dari TikTok (dan dapat diperluas ke Instagram)
-* **YouTube Data API v3** → mengambil komentar dari video YouTube
-* **Pandas** → pengolahan dan manipulasi data
-* **python-dotenv** → manajemen API key melalui environment variables
+- **Python (Jupyter Notebook / `.ipynb`)**
+- **Apify** → scraping data dari TikTok (dan dapat diperluas ke Instagram)
+- **YouTube Data API v3** → mengambil komentar dari video YouTube
+- **Pandas** → pengolahan dan manipulasi data
+- **python-dotenv** → manajemen API key melalui environment variables
 
 ---
 
-## 📁 Struktur Project
+## Struktur Project
 
 ```
 scraping/
@@ -46,6 +46,7 @@ Buat file `.env` di root project:
 API_TOKEN=your_apify_token
 YOUTUBE_API_KEY=your_youtube_api_key
 ```
+
 ---
 
 ## Instalasi
@@ -55,14 +56,16 @@ Aktifkan virtual environment, lalu install dependency:
 ```bash
 pip install -r requirements.txt
 ```
+
 ---
 
 ## Output Data
 
 Data hasil scraping disimpan dalam format:
 
-* `.csv` → untuk pemrosesan data
-* `.xlsx` → untuk analisis manual
+- `.csv` → untuk pemrosesan data
+- `.xlsx` → untuk analisis manual
+
 ---
 
 ---
@@ -71,9 +74,9 @@ Data hasil scraping disimpan dalam format:
 
 Proyek ini merupakan bagian dari:
 
-* Pengumpulan dataset media sosial
-* Analisis sentimen masyarakat
-* Studi terhadap persepsi publik terkait **Koperasi Desa Merah Putih**
+- Pengumpulan dataset media sosial
+- Analisis sentimen masyarakat
+- Studi terhadap persepsi publik terkait **Koperasi Desa Merah Putih**
 
 ---
 
