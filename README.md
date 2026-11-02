@@ -21,11 +21,14 @@ Proyek ini bertujuan untuk mengumpulkan dan menganalisis data komentar dari berb
 ```
 scraping/
 │
-├── tiktok/
-│   └── tiktok.ipynb        # scraping komentar TikTok
+├── scrape_tiktok/
+│   └── scraping.ipynb        # scraping komentar TikTok
 │
-├── youtube/
-│   └── youtube.ipynb       # scraping komentar YouTube
+├── scrape_x/
+│   └── scraping.ipynb        # scraping komentar TikTok
+│
+├── scrape_youtube/
+│   └── scraping.ipynb       # scraping komentar YouTube
 │
 ├── results/
 │   ├── *.csv               # hasil dalam format csv
