@@ -1,0 +1,232 @@
+Anda bertindak sebagai annotator profesional untuk penelitian skripsi mengenai Aspect Based Sentiment Analysis (ABSA) terhadap opini masyarakat mengenai kebijakan Koperasi Desa Merah Putih (KDMP).
+
+Saya akan mengirimkan file CSV.
+
+Pada file tersebut terdapat berbagai kolom metadata, namun Anda HANYA menggunakan isi kolom **text** sebagai dasar pelabelan.
+
+======================================================
+TUGAS
+======================================================
+
+Untuk setiap baris data:
+
+1. Baca isi komentar pada kolom **text**.
+2. Berikan label Sentimen.
+3. Berikan label Aspek.
+
+JANGAN mengubah isi komentar.
+
+JANGAN mengubah urutan data.
+
+JANGAN menghapus kolom apa pun.
+
+JANGAN menambahkan penjelasan.
+
+Hanya tambahkan dua kolom baru di bagian paling akhir:
+
+- Sentimen
+- Aspek
+
+======================================================
+LABEL SENTIMEN
+======================================================
+
+Gunakan hanya salah satu label berikut.
+
+1. Positif
+
+Digunakan apabila komentar berisi:
+
+- dukungan
+- apresiasi
+- rasa puas
+- optimisme
+- harapan positif
+- manfaat program
+- penilaian baik terhadap KDMP
+
+======================================================
+
+2. Negatif
+
+Digunakan apabila komentar berisi:
+
+- kritik
+- penolakan
+- sindiran
+- keluhan
+- rasa kecewa
+- kekhawatiran
+- tuduhan
+- penilaian buruk
+
+======================================================
+
+3. Netral
+
+Digunakan apabila komentar:
+
+- hanya berupa informasi
+- hanya bertanya
+- tidak menunjukkan emosi
+- hanya menyebut fakta
+- tidak dapat disimpulkan kecenderungan opininya
+
+======================================================
+LABEL ASPEK
+======================================================
+
+Setiap komentar WAJIB memiliki SATU aspek yang paling dominan.
+
+Gunakan hanya lima label berikut.
+
+1. Ekonomi atau Unit Usaha
+
+Meliputi:
+
+- UMKM
+- pedagang
+- usaha
+- koperasi
+- modal
+- omzet
+- keuntungan
+- simpan pinjam
+- distribusi
+- kesejahteraan
+- ekonomi desa
+- lapangan kerja
+- harga
+- pendapatan
+
+======================================================
+
+2. Kelembagaan atau Tata Kelola
+
+Meliputi:
+
+- pengurus
+- organisasi
+- manajemen
+- SDM
+- transparansi
+- akuntabilitas
+- profesionalisme
+- kompetensi
+- korupsi
+- birokrasi
+- intervensi politik lokal
+- pengawasan
+
+======================================================
+
+3. Regulasi atau Politik
+
+Meliputi:
+
+- kebijakan
+- aturan
+- regulasi
+- pemerintah
+- presiden
+- kementerian
+- DPR
+- Dana Desa
+- APBN
+- hukum
+- keputusan pemerintah
+- politik
+
+======================================================
+
+4. Infrastruktur Fisik
+
+Meliputi:
+
+- gedung
+- bangunan
+- lahan
+- tanah
+- lokasi
+- sekolah
+- jalan
+- sungai
+- konstruksi
+- fasilitas fisik
+
+======================================================
+
+5. Operasional dan Pengadaan
+
+Meliputi:
+
+- kendaraan operasional
+- mobil dinas
+- motor operasional
+- logistik
+- pengadaan
+- impor kendaraan
+- distribusi operasional
+- peralatan
+- pelaksanaan teknis
+
+======================================================
+ATURAN PELABELAN
+======================================================
+
+1. Setiap komentar hanya memiliki SATU sentimen.
+
+2. Setiap komentar hanya memiliki SATU aspek.
+
+3. Jika terdapat lebih dari satu aspek, pilih aspek yang paling dominan.
+
+4. Jika terdapat lebih dari satu sentimen, pilih sentimen yang paling dominan.
+
+5. Jika terdapat sarkasme, pahami makna sebenarnya.
+
+6. Emoji dapat digunakan sebagai petunjuk sentimen.
+
+7. Bahasa gaul, singkatan, atau typo harus dipahami berdasarkan konteks.
+
+8. Jangan memperbaiki isi komentar.
+
+9. Jangan menghapus komentar kosong apabila ada.
+
+10. Jangan memberikan alasan atau penjelasan.
+
+11. Pelabelan harus konsisten pada seluruh dataset.
+
+======================================================
+FORMAT OUTPUT
+======================================================
+
+Pertahankan seluruh kolom asli CSV.
+
+Tambahkan dua kolom baru di bagian paling akhir:
+
+Sentimen
+Aspek
+
+Contoh:
+
+videoWebUrl,...
+text
+...
+Sentimen
+Aspek
+
+======================================================
+OUTPUT
+======================================================
+
+Kembalikan hasil dalam bentuk FILE CSV yang telah dilabeli.
+
+Jangan menampilkan tabel di chat.
+
+Jangan menampilkan sebagian data.
+
+Jangan mengubah encoding karakter UTF-8.
+
+Jangan mengubah nama kolom asli.
+
+Hanya tambahkan kolom Sentimen dan Aspek.
