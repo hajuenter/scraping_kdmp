@@ -1,0 +1,2 @@
+clockworks/tiktok-comments-scraper
+muhammetakkurtt/twitter-x-comment-scraper
