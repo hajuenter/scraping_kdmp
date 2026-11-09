@@ -9,7 +9,7 @@ Proyek ini mengumpulkan dan menganalisis komentar dari media sosial terkait topi
 ## Teknologi yang Digunakan
 
 - **Python + Jupyter Notebook (`.ipynb`)**
-- **Apify** → scraping komentar TikTok
+- **Apify** → scraping komentar TikTok dan balasan X (Twitter)
 - **YouTube Data API v3** → mengambil komentar video YouTube
 - **Pandas** → pengolahan dan manipulasi data
 - **Matplotlib** → pembuatan grafik visualisasi
@@ -26,7 +26,7 @@ scraping/
 │   └── scraping.ipynb              # scraping komentar TikTok
 │
 ├── scrape_x/
-│   └── scraping.ipynb              # scraping X (masih dalam pengembangan)
+│   └── scraping.ipynb              # scraping balasan X (Twitter)
 │
 ├── scrape_youtube/
 │   └── scraping.ipynb              # scraping komentar YouTube
@@ -37,6 +37,7 @@ scraping/
 │
 ├── results/
 │   ├── tiktok/                     # hasil scraping TikTok (.csv/.xlsx)
+│   ├── x/                          # hasil scraping X (.csv/.xlsx)
 │   └── youtube/                    # hasil scraping YouTube (.csv/.xlsx)
 │
 ├── visualisation/
@@ -62,6 +63,7 @@ Buat file `.env` di root project:
 ```env
 API_TOKEN=your_apify_token
 YOUTUBE_API_KEY=your_youtube_api_key
+X_COOKIES=auth_token=xxx; ct0=yyy; twid=zzz
 ```
 
 ---
@@ -97,7 +99,18 @@ Buka `scrape_youtube/scraping.ipynb`, tambahkan atau ubah `VIDEO_IDS`, lalu jala
 
 Kolom: `text`, `likes`, `publishedAt`, `videoId`, `videoUrl`, `commentId`, `authorDisplayName`, `authorChannelId`, `updatedAt`, `totalReplyCount`, `textOriginal`.
 
-### 3. Pelabelan
+### 3. Scraping X (Twitter)
+
+Buka `scrape_x/scraping.ipynb`, atur `TWEET_URLS`, `MAX_DEPTH`, dan `ONLY_DIRECT_REPLIES`, lalu jalankan semua cell. Butuh Apify actor [Twitter (X) Comment Scraper](https://apify.com/muhammetakkurtt/twitter-x-comment-scraper) dan cookie akun X di `X_COOKIES`.
+
+Hasil disimpan ke:
+
+- `results/x/x_comments.csv`
+- `results/x/x_comments.xlsx`
+
+Kolom: `tweet_id`, `tweet_url`, `conversation_id`, `in_reply_to_tweet_id`, `text`, `created_at`, `lang`, `favorite_count`, `reply_count`, `retweet_count`, `quote_count`, `views_count`, `reply_to_username`, `user_screen_name`, `user_name`, `user_is_blue_verified`, `sourceTweetUrl`.
+
+### 4. Pelabelan
 
 Dataset berlabel tersedia di `label/tiktok/tiktok_comments_labeled.csv` dengan kolom tambahan:
 
@@ -106,7 +119,7 @@ Dataset berlabel tersedia di `label/tiktok/tiktok_comments_labeled.csv` dengan k
 
 Acuan pelabelan ada di `propmt_labelling.txt`.
 
-### 4. Visualisasi
+### 5. Visualisasi
 
 Dari root project:
 
